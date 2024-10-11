@@ -7,6 +7,7 @@ import  Planets  from './views/Planets.jsx';
 import  Starships  from './views/Starships.jsx';
 import  Navbar  from './component/Navbar.jsx';
 import injectContext from './store/appContext.js';
+import { Footer } from "./component/footer.js";
 
 const Layout = () => {
     const basename = process.env.BASENAME || "";
@@ -23,6 +24,7 @@ const Layout = () => {
                     <Route path="/starships" element={<Starships />} />
                     <Route path="*" element={<h1>Not Found</h1>} />
                 </Routes>
+                <Footer/>
             </BrowserRouter>
         </div>
     );
